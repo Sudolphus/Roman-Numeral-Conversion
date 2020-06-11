@@ -16,7 +16,7 @@
       <p>You input the number, we give you a less useful number! Fun!</p>
     </div>
 
-    <form id="numeral">
+    <form id="numberToNumeral">
       <div class="form-group">
         <label for="number">Enter the number you want converted!</label>
         <input name="number" type="number" class="form-control">
@@ -24,7 +24,18 @@
       <button class="btn btn-warning" type="submit">Get Your Numeral!</button>
     </form>
 
-    <p class="result"><span id="numInput"></span> = <span id="numeralOutput"></span></p>
+    <p class="result" id="numResult"><span id="numInput"></span> = <span id="numeralOutput"></span></p>
+
+    <form id="numeralToNumber">
+      <div class="form-group">
+        <label for="numeral">Enter the numeral you want converted!</label>
+        <input name="numeral" type="text" class="form-control">
+      </div>
+      <button class="btn btn-warning">Get your Number!</button>
+    </form>
+
+    <p class="result" id="numeralResult"><span id="numeralInput"></span> = <span id="numberOutput"></span></p>
+
   </div>
 </body>
 </html>
