@@ -20,6 +20,12 @@ const romanConverter = function(num) {
     } else if (remainder >= 90) {
       remainder -= 90;
       numeral += "XC";
+    } else if (remainder >= 50) {
+      remainder -= 50;
+      numeral += "L";
+    } else if (remainder >= 40) {
+      remainder -= 40;
+      numeral += "XL";
     }
   }
 }
