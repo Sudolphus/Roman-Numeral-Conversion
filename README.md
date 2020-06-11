@@ -1,12 +1,12 @@
-# _Title_
+# _Roman Numeral Converter_
 
-#### _Short Description, current date or date of latest version_
+#### _Simple program to convert integers to roman numerals, 6/11/2020_
 
-#### By _**Author Names**_
+#### By _**Nikolas Kososik, Micheal Hansen, Michael Petersen**_
 
 ## Description
 
-_Detailed Description of project_
+_This project focuses on the use of BDD, utilizing HTML, CSS, and JS to create a webpage that will take a user input and run it through a series of behaviors that recognize each possible output of a given integer up to the number 3,999._
 
 ## Specifications
 
@@ -38,8 +38,8 @@ Open by downloading:
 
 Open via Bash/GitBash:
 1. Clone this repository onto your computer:
-`git clone https://github.com/MPetersen89/ProjectName`
-2. Navigate into the `ProjectName` directory in Visual Studio Code or preferred text editor
+`git clone https://github.com/nkososik/Roman-Numeral-Conversion`
+2. Navigate into the `Roman-Numeral-Conversion` directory in Visual Studio Code or preferred text editor
 `code .`
 3. Open index.html in Chrome or preferred browser:
 `open index.html`
@@ -48,11 +48,13 @@ Open via Bash/GitBash:
 
 ## Known Bugs
 
-_List of current bugs present in current build_
+_No known bugs at this time._
 
 ## Support and contact details
 
-_name and email of contributers_
+* _Nikolas Kososik <nikolas.kososik@gmail.com>_
+* _Micheal Hansen <micheal.hansen@gmail.com>_
+* _Michael Petersen <michael_petersen_email@yahoo.com>_
 
 ## Technologies Used
 
@@ -67,4 +69,4 @@ _name and email of contributers_
 
 MIT - License
 
-Copyright (c) 2020 **_Author Names_**
+Copyright (c) 2020 **_Nikolas Kososik, Micheal Hansen, & Michael Petersen_**

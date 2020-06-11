@@ -1,0 +1,15 @@
+.result {
+  display: none;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.page-header {
+  text-align: center;
+  background-color: inherit;
+}
+
+body {
+  background-color: red;
+  color: gold;
+}

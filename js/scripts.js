@@ -43,6 +43,7 @@ const romanConverter = function(num) {
       numeral += "I";
     }
   }
+  return numeral;
 }
 
 $(document).ready(function() {
@@ -56,5 +57,9 @@ $(document).ready(function() {
     }
 
     const numeralOutput = romanConverter(numberInput);
+
+    $(".result").show();
+    $("#numInput").text(numberInput);
+    $("#numeralOutput").text(numeralOutput);
   });
 });
