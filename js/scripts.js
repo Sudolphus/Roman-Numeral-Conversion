@@ -46,8 +46,52 @@ const romanConverter = function(num) {
   return numeral;
 }
 
+const numberConverter = function(numeral) {
+  let numer = numeral.toUpperCase();
+  let number = 0;
+  while (numer.length > 0) {
+    if (numer.charAt(0) === "M") {
+      numer = numer.slice(1);
+      number += 1000;
+    } else if (numer.charAt(0) === "D") {
+      numer = numer.slice(1);
+      number += 500;
+    } else if (numer.charAt(0) === "C") {
+      if (numer.search(/[DM]/) === 1) {
+        number -= 100;
+      } else {
+        number += 100;
+      }
+      numer = numer.slice(1);
+    } else if (numer.charAt(0) === "L") {
+      numer = numer.slice(1);
+      number += 50;
+    } else if (numer.charAt(0) === "X") {
+      if (numer.search(/[CL]/) === 1) {
+        number -= 10;
+      } else {
+        number += 10;
+      }
+      numer = numer.slice(1);
+    } else if (numer.charAt(0) === "V") {
+      numer = numer.slice(1);
+      number += 5;
+    } else if (numer.charAt(0) === "I") {
+      if (numer.search(/[XV]/) === 1) {
+        number -= 1;
+      } else {
+        number += 1;
+      }
+      numer = numer.slice(1);
+    }
+  }
+  return number;
+}
+
+
+//User Interface Logic
 $(document).ready(function() {
-  $("form#numeral").submit(function(event) {
+  $("form#numberToNumeral").submit(function(event) {
     event.preventDefault();
     const numberInput = parseInt($("input[name=number]").val());
 
@@ -58,8 +102,24 @@ $(document).ready(function() {
 
     const numeralOutput = romanConverter(numberInput);
 
-    $(".result").show();
+    $("#numResult").show();
     $("#numInput").text(numberInput);
     $("#numeralOutput").text(numeralOutput);
   });
+
+  $("form#numeralToNumber").submit(function(event) {
+    event.preventDefault();
+    const numeralInput = $("input[name=numeral]").val();
+
+    if (numeralInput.search(/[^MDCLXVI]/i) > -1) {
+      alert("Illegal Character Detected!");
+      return;
+    }
+
+    const numberOutput = numberConverter(numeralInput);
+
+    $("#numeralResult").show();
+    $("#numeralInput").text(numeralInput);
+    $("#numberOutput").text(numberOutput);
+  })
 });
