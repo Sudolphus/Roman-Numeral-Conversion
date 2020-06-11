@@ -5,7 +5,10 @@ const romanConverter = function(num) {
     remainder -= 1000;
     numeral += 'M';
   }
-
+  if (remainder >= 900) {
+    remainder -= 900;
+    numeral += "CM";
+  }
 }
 
 $(document).ready(function() {
