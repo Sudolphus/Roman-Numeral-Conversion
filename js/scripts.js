@@ -32,6 +32,15 @@ const romanConverter = function(num) {
     } else if (remainder === 9) {
       remainder -= 9;
       numeral += "IX";
+    } else if (remainder >= 5) {
+      remainder -= 5;
+      numeral += "V";
+    } else if (remainder === 4) {
+      remainder -= 4;
+      numeral += "IV";
+    } else {
+      remainder -= 1;
+      numeral += "I";
     }
   }
 }
