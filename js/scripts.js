@@ -26,6 +26,12 @@ const romanConverter = function(num) {
     } else if (remainder >= 40) {
       remainder -= 40;
       numeral += "XL";
+    } else if (remainder >= 10) {
+      remainder -= 10;
+      numeral += "X";
+    } else if (remainder === 9) {
+      remainder -= 9;
+      numeral += "IX";
     }
   }
 }
@@ -35,8 +41,8 @@ $(document).ready(function() {
     event.preventDefault();
     const numberInput = parseInt($("input[name=number]").val());
 
-    if (!numberInput) {
-      alert("Enter an Integer");
+    if (!numberInput || numberInput < 1) {
+      alert("Enter a Positive Integer");
       return;
     }
 
