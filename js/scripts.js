@@ -3,6 +3,11 @@ $(document).ready(function() {
     event.preventDefault();
     const numberInput = parseInt($("input[name=number]").val());
 
-    
+    if (!numberInput) {
+      alert("Enter an Integer");
+      return;
+    }
+
+
   })
 })
