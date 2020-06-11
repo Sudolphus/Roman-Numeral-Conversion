@@ -1,21 +1,26 @@
 const romanConverter = function(num) {
   let remainder = num;
   let numeral = "";
-  while (remainder >= 1000) {
-    remainder -= 1000;
-    numeral += 'M';
-  }
-  if (remainder >= 900) {
-    remainder -= 900;
-    numeral += "CM";
-  }
-  if (remainder >= 500) {
-    remainder -= 500;
-    numeral += "D";
-  }
-  if (remainder >= 400) {
-    remainder -= 400;
-    numeral += "CD";
+  while (remainder > 0) {
+    if (remainder >= 1000) {
+      remainder -= 1000;
+      numeral += 'M';
+    } else if (remainder >= 900) {
+      remainder -= 900;
+      numeral += "CM";
+    } else if (remainder >= 500) {
+      remainder -= 500;
+      numeral += "D";
+    } else if (remainder >= 400) {
+      remainder -= 400;
+      numeral += "CD";
+    } else if (remainder >= 100) {
+      remainder -= 100;
+      numeral += "C";
+    } else if (remainder >= 90) {
+      remainder -= 90;
+      numeral += "XC";
+    }
   }
 }
 
