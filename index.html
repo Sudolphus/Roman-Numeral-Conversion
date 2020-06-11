@@ -3,9 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.5.1.js"></script>
+  <script src="js/scripts.js"></script>
   <title>Number to Roman Numeral Converter</title>
 </head>
 <body>
-  
+  <div class="container">
+    <div class="page-header">
+      <h1>Welcome to the Roman Numeral Calculator!</h1>
+      <p>You input the number, we give you a less useful number!</p>
+    </div>
+
+    <form id="numeral">
+      <div class="form-group">
+        <label for="number">Enter the number you want converted!</label>
+        <input name="number" type="number" class="form-control">
+      </div>
+      <button class="btn btn-success" type="submit">Get Your Numeral!</button>
+    </form>
+
+    <p class="result"><span id="numInput"> + "=" + <span id="numeral"></span></p>
+  </div>
 </body>
 </html>
