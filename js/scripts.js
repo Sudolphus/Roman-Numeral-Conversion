@@ -1,3 +1,13 @@
+const romanConverter = function(num) {
+  let remainder = num;
+  let numeral = "";
+  while (remainder >= 1000) {
+    remainder -= 1000;
+    numeral += 'M';
+  }
+
+}
+
 $(document).ready(function() {
   $("form#numeral").submit(function(event) {
     event.preventDefault();
@@ -8,6 +18,6 @@ $(document).ready(function() {
       return;
     }
 
-
-  })
-})
+    const numeralOutput = romanConverter(numberInput);
+  });
+});
