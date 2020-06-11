@@ -9,6 +9,14 @@ const romanConverter = function(num) {
     remainder -= 900;
     numeral += "CM";
   }
+  if (remainder >= 500) {
+    remainder -= 500;
+    numeral += "D";
+  }
+  if (remainder >= 400) {
+    remainder -= 400;
+    numeral += "CD";
+  }
 }
 
 $(document).ready(function() {
